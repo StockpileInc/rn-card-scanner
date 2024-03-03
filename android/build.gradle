@@ -29,7 +29,7 @@ android {
         versionName "1.0"
         externalNativeBuild {
             cmake {
-                abiFilters 'armeabi-v7a', "x86",  "x86_64"
+                abiFilters "x86",  "x86_64"
                 arguments '-DANDROID_STL=c++_shared'
             }
         }
