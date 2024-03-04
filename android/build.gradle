@@ -6,7 +6,7 @@ buildscript {
         }
 
         dependencies {
-            classpath 'com.android.tools.build:gradle:4.2.2'
+            classpath 'com.android.tools.build:gradle'
         }
     }
 }
@@ -27,16 +27,8 @@ android {
         targetSdkVersion safeExtGet('targetSdkVersion', 31)
         versionCode 1
         versionName "1.0"
-        externalNativeBuild {
-            cmake {
-                arguments '-DANDROID_STL=c++_shared'
-            }
-        }
     }
     externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-        }
     }
     buildTypes {
         release {
